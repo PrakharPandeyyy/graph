@@ -7,64 +7,48 @@ body {
     background-color: #f0f0f0;
     margin: 0;
     font-family: Arial, sans-serif;
+    overflow-y: hidden;
+}
+h1{
+    font-size: 36px;
+    font-weight: bold;
+    color: white;
+   
+
 }
 .heading {
     position: absolute;
     top: 20px;
     right:50px;
     left: 50px;
-    
     text-align: center;
     font-size: 36px; /* Increased font size */
     font-weight: bold;
     color: #333;
     padding: 20px;
-    margin-bottom: 40px; /* Added margin to separate from the name cards */
+    margin-bottom: 10px; /* Added margin to separate from the name cards */
     background: linear-gradient(145deg, #6e8efb, #a777e3); /* Gradient text color */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .container {
+
+    transform: translateY(-95px);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
+    justify-content: start;
+    width: 100%;
     padding: 20px; /* Added padding for spacing around the container */
 }
-.namecard {
-    width: 400px;
-    height: 320px;
-    margin: 10px; /* Added margin for spacing between the name cards */
-    background: linear-gradient(145deg, #e6e6e6, #ffffff);
-    border-radius: 10px;
-    box-shadow: 5px 5px 15px #ccc, -5px -5px 15px #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: perspective(500px) rotateX(10deg);
-    transition: transform 0.3s;
-}
-.namecard:hover {
-    transform: perspective(500px) rotateX(0deg) rotateY(360deg);
-}
-.namecard textarea {
-    width: 80%;
-    height: 80%;
-    border: none;
-    outline: none;
-    resize: none;
-    background-color: transparent;
-    font-size: 16px;
-    text-align: center;
-}
+
 .carousel {
-    margin: 0 10px; /* Added margin for spacing between carousels */
+    margin: 0 15px; /* Added margin for spacing between carousels */
+    height:300px;
+    width:300px;
 }
 
 .carousel-button {
-    display: block;
-    width: 200px;
-    height: 120px;
+    width: 300px;
+    height: 580px;
     background-color: #6e8efb;
     color: white;
     font-size: 18px;

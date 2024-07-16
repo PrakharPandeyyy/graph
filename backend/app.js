@@ -19,7 +19,7 @@ async function getGPT4Response(prompt) {
     const response = await openai.chat.completions.create({
       model: "gpt-4",
       messages: [
-        { role: "system", content: "You are a helpful assistant named json" },
+        { role: "system", content: "You are a helpful assistant named Gpt" },
         { role: "user", content: prompt },
       ],
       max_tokens: 150,
@@ -27,8 +27,8 @@ async function getGPT4Response(prompt) {
 
     return response.choices[0].message.content.trim();
   } catch (error) {
-    console.error("Error getting response from GPT-4:", error.message);
-    return "Error getting response from GPT-4.";
+    console.error("Error getting response from GPT:", error.message);
+    return "Error getting response from GPT.";
   }
 }
 
