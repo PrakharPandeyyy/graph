@@ -40,15 +40,14 @@ app.post("/api/chat", async (req, res) => {
     const response = await getGPT4Response(prompt);
     console.log(response);
     res.send({
-      mesaage:"success",
-      response:response,
+      mesaage: "success",
+      response: response,
     });
     // console.log("GPT-4 response:", response);
   } catch (e) {
     console.log(e);
   }
 });
-
 
 app.listen(3001, () => {
   console.log("Server is running on port 3001");
