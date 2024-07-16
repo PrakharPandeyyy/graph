@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
 var cors = require("cors");
+const env = require("dotenv").config();
 app.use(cors());
 
 app.use(bodyParser.json({ extended: true }));
@@ -9,7 +10,7 @@ app.use(bodyParser.json({ extended: true }));
 const { OpenAI } = require("openai");
 
 const openai = new OpenAI({
-  apiKey: "sk-proj-j4aNWkaWDJItnhtZczAwT3BlbkFJM0b7bm3RAaIblIW7xg38",
+  apiKey: process.env.apiKey,
   baseApiUrl: "https://api.openai.com/v1",
 });
 
