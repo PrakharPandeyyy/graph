@@ -12,12 +12,12 @@ const Main = () => {
       <div class="container">
         {ques.map((q, index) => {
           return (
-            <div class="carousel">
+            <div className="carousel">
               <button
-                class="carousel-button"
+                className="carousel-button"
                 onClick={() => {
                   setCurrentQuestion(q.question);
-                  navigate("/home", { state: { currentQuestion: currentQuestion } });
+                  navigate("/home", { state: { currentQuestion: q.question } });
                 }}
               >
                 <h1>Problem {index + 1}</h1>
