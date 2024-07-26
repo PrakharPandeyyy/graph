@@ -3,15 +3,20 @@ import { useState } from "react";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
 
+
 const Home = () => {
   const location = useLocation();
   const { currentQuestion } = location.state || {};
+  const {sessionId} = location.state || {};
+
+  
   console.log("Current Question:", currentQuestion);
   const [data, setData] = useState("");
   const [prompt, setPrompt] = useState("");
   const getPrompt = async () => {
     try {
       const response = await axios.post("http://localhost:3001/api/chat", {
+        sessionId: sessionId,
         prompt: prompt,
       });
       setData(response.data.response);
